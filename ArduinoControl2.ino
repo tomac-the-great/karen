@@ -42,6 +42,7 @@ DallasTemperature sensors(&oneWire);
 float hum;  // Stores humidity value
 float tempin; // Stores inside temperature value
 float tempout; // Stores inside temperature value in Fahrenheit
+float state;
 
 void setup() {
 	// Start up the DHT22 library
@@ -91,7 +92,7 @@ void loop() {
   // Get Serial Input
   while(Serial.available()) 
    {
-     char state = Serial.read();
+     state = Serial.read();
       if (state == 'A') {
         digitalWrite(P_INTAKE, HIGH);
       }

@@ -11,8 +11,6 @@ while (1):
         arduinoData = ser.readline()
         print(arduinoData)
 	temp = json.loads(arduinoData)
-	print temp['TempOut']
-
 
 #	dataFile.write(arduinoData)
 #	dataFile.close()
